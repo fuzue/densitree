@@ -91,7 +91,7 @@ fig.write_html("spade_tree_interactive.html")
 # or fig.show() in a notebook
 ```
 
-<iframe src="../assets/images/tree_interactive.html" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="../../assets/images/tree_interactive.html" width="100%" height="500" frameborder="0"></iframe>
 
 ### Work with the tree directly
 
