@@ -1,6 +1,6 @@
 site_name: densitree
 site_description: "SPADE clustering for high-dimensional cytometry data in Python"
-site_url: https://densitree.readthedocs.io
+site_url: https://densitree.fuzue.tech
 repo_url: https://github.com/fuzue/densitree
 repo_name: fuzue/densitree
 

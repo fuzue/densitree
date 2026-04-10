@@ -5,7 +5,34 @@ build-backend = "hatchling.build"
 [project]
 name = "densitree"
 version = "0.1.0"
+description = "Density-normalized clustering with minimum spanning tree construction for high-dimensional data"
+readme = "README.md"
+license = "MIT"
 requires-python = ">=3.10"
+authors = [
+    { name = "Edgar Zanella Alvarenga", email = "edgar@fuzue.tech" },
+]
+keywords = [
+    "clustering",
+    "spade",
+    "cytometry",
+    "single-cell",
+    "density",
+    "spanning-tree",
+    "machine-learning",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = [
     "numpy>=1.24",
     "scipy>=1.10",
@@ -15,6 +42,12 @@ dependencies = [
     "plotly>=5.15",
     "pandas>=2.0",
 ]
+
+[project.urls]
+Homepage = "https://densitree.fuzue.tech"
+Documentation = "https://densitree.fuzue.tech"
+Repository = "https://github.com/fuzue/densitree"
+Issues = "https://github.com/fuzue/densitree/issues"
 
 [project.optional-dependencies]
 dev = ["pytest>=7.4", "pytest-cov"]
