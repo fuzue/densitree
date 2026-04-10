@@ -1,11 +1,19 @@
 site_name: densitree
-site_description: "SPADE clustering for high-dimensional cytometry data in Python"
+site_description: "Density-normalized clustering with spanning tree construction for high-dimensional data. State-of-the-art SPADE implementation in Python."
 site_url: https://densitree.fuzue.tech
 repo_url: https://github.com/fuzue/densitree
 repo_name: fuzue/densitree
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fuzue/densitree
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/densitree/
+
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
     - scheme: default
       primary: deep purple
