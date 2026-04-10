@@ -128,6 +128,8 @@ fig.savefig("condition_comparison.png", dpi=150, bbox_inches="tight")
 
 Blue nodes are enriched in healthy, red nodes in disease. The rare population cluster should appear as a bright red node.
 
+![Condition comparison](../assets/images/condition_comparison.png)
+
 ## Statistical testing (advanced)
 
 For rigorous comparison with biological replicates, use a per-cluster test:

@@ -32,13 +32,15 @@ print(spade.result_.cluster_stats_)
 
 ```python
 # Static matplotlib plot
-fig = spade.result_.plot_tree(color_by="CD4", backend="matplotlib")
+fig = spade.result_.plot_tree(color_by="CD3", backend="matplotlib")
 fig.savefig("tree.png", dpi=150)
 
 # Interactive plotly plot
-fig = spade.result_.plot_tree(color_by="CD4", backend="plotly")
+fig = spade.result_.plot_tree(color_by="CD3", backend="plotly")
 fig.show()
 ```
+
+![Example SPADE tree](../assets/images/tree_cd3.png)
 
 ## Choosing parameters
 

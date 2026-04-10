@@ -36,6 +36,32 @@ print(spade.result_.cluster_stats_)
 spade.result_.plot_tree(color_by=0, backend="matplotlib")
 ```
 
+## Example outputs
+
+### Tree colored by marker expression
+
+Nodes are sized by cell count. Color shows median CD3 expression -- high (yellow) in T cell clusters, low (purple) elsewhere.
+
+![SPADE tree colored by CD3](assets/images/tree_cd3.png)
+
+### Condition comparison
+
+Red nodes are enriched in the disease condition, blue in healthy. Cluster 5 (dark red) contains a rare population expanded in disease.
+
+![Condition comparison](assets/images/condition_comparison.png)
+
+### Cluster heatmap
+
+Median marker expression per cluster reveals distinct cell populations.
+
+![Cluster heatmap](assets/images/cluster_heatmap.png)
+
+### Interactive visualization
+
+densitree also supports interactive plotly trees -- hover for cluster details, zoom and pan.
+
+<iframe src="assets/images/tree_interactive.html" width="100%" height="500" frameborder="0"></iframe>
+
 ## Installation
 
 ```bash

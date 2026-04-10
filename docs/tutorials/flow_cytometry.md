@@ -68,22 +68,30 @@ print(stats.nsmallest(5, "size")[["size"]])
 ### Visualize the tree
 
 ```python
-# Color by CD4 expression
-fig = spade.result_.plot_tree(color_by="CD4", size_by="count", backend="matplotlib")
-fig.savefig("spade_tree_cd4.png", dpi=150, bbox_inches="tight")
-
-# Color by CD8
-fig = spade.result_.plot_tree(color_by="CD8", size_by="count", backend="matplotlib")
-fig.savefig("spade_tree_cd8.png", dpi=150, bbox_inches="tight")
+# Color by CD3 expression
+fig = spade.result_.plot_tree(color_by="CD3", size_by="count", backend="matplotlib")
+fig.savefig("spade_tree_cd3.png", dpi=150, bbox_inches="tight")
 ```
+
+![Tree colored by CD3](../assets/images/tree_cd3.png)
+
+```python
+# Color by CD19 (B cell marker)
+fig = spade.result_.plot_tree(color_by="CD19", size_by="count", backend="matplotlib")
+fig.savefig("spade_tree_cd19.png", dpi=150, bbox_inches="tight")
+```
+
+![Tree colored by CD19](../assets/images/tree_cd19.png)
 
 ### Interactive exploration with plotly
 
 ```python
-fig = spade.result_.plot_tree(color_by="CD4", backend="plotly")
+fig = spade.result_.plot_tree(color_by="CD3", backend="plotly")
 fig.write_html("spade_tree_interactive.html")
 # or fig.show() in a notebook
 ```
+
+<iframe src="../assets/images/tree_interactive.html" width="100%" height="500" frameborder="0"></iframe>
 
 ### Work with the tree directly
 
