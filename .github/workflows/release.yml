@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
+      contents: read   # checkout private repo
       id-token: write  # trusted publishing
 
     steps:
