@@ -1,0 +1,3 @@
+# SPADEResult
+
+::: densitree.result.SPADEResult
