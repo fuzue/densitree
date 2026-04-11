@@ -1,0 +1,4 @@
+/* Fuzue logo: invert in dark mode so it stays visible */
+[data-theme="dark"] img[alt="Fuzue Tech"] {
+    filter: invert(1) brightness(1.2);
+}

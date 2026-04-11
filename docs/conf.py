@@ -3,8 +3,8 @@ import sys
 sys.path.insert(0, os.path.abspath('..'))
 
 project = 'densitree'
-copyright = '2025, Edgar Zanella Alvarenga'
-author = 'Edgar Zanella Alvarenga'
+copyright = '2025, Fuzue Tech'
+author = 'Fuzue Tech'
 from importlib.metadata import version as _get_version
 release = _get_version('densitree')
 version = '.'.join(release.split('.')[:2])
@@ -23,6 +23,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'superpowers']
 
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
+html_css_files = ['custom.css']
 html_extra_path = ['CNAME', 'assets']
 
 html_theme_options = {
@@ -36,6 +37,8 @@ html_theme_options = {
     ],
     "show_toc_level": 2,
     "navigation_with_keys": True,
+    "footer_start": ["fuzue-footer"],
+    "footer_end": ["copyright"],
 }
 
 napoleon_google_docstring = False
