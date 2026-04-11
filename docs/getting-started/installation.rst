@@ -9,7 +9,7 @@ From PyPI
    pip install densitree
 
 From source (development)
---------------------------
+-------------------------
 
 .. code-block:: bash
 

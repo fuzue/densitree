@@ -45,7 +45,7 @@ Example outputs
 ---------------
 
 Tree colored by marker expression
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nodes are sized by cell count. Color shows median CD3 expression — high (yellow) in T cell clusters, low (purple) elsewhere.
 
