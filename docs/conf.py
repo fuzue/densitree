@@ -26,7 +26,7 @@ html_static_path = ['_static']
 html_css_files = ['custom.css']
 html_extra_path = ['CNAME', 'assets']
 html_sidebars = {
-    "**": ["sidebar-nav-bs"],
+    "**": ["navbar-nav", "sidebar-nav-bs"],
 }
 
 html_theme_options = {

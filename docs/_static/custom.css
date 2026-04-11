@@ -2,3 +2,20 @@
 [data-theme="dark"] img[alt="Fuzue Tech"] {
     filter: invert(1) brightness(1.2);
 }
+
+/* Render top-level nav as a vertical list in the primary sidebar */
+.bd-sidebar-primary .bd-navbar-elements {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.bd-sidebar-primary .bd-navbar-elements .nav-item {
+    width: 100%;
+}
+
+.bd-sidebar-primary .bd-navbar-elements .nav-item .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+}
