@@ -5,7 +5,9 @@ sys.path.insert(0, os.path.abspath('..'))
 project = 'densitree'
 copyright = '2025, Edgar Zanella Alvarenga'
 author = 'Edgar Zanella Alvarenga'
-release = '0.1.0'
+from importlib.metadata import version as _get_version
+release = _get_version('densitree')
+version = '.'.join(release.split('.')[:2])
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -32,7 +34,7 @@ html_theme_options = {
             "icon": "fa-brands fa-python",
         },
     ],
-"show_toc_level": 2,
+    "show_toc_level": 2,
     "navigation_with_keys": True,
 }
 
