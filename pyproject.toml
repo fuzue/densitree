@@ -53,9 +53,9 @@ Issues = "https://github.com/fuzue/densitree/issues"
 dev = ["pytest>=7.4", "pytest-cov"]
 bench = ["readfcs>=2.0", "flowsom>=0.2", "leidenalg>=0.10", "igraph>=1.0", "tabulate"]
 docs = [
-    "mkdocs>=1.6",
-    "mkdocs-material>=9.5",
-    "mkdocstrings[python]>=1.0",
+    "sphinx>=7.0",
+    "pydata-sphinx-theme>=0.15",
+    "sphinx-copybutton>=0.5",
 ]
 
 [tool.pytest.ini_options]

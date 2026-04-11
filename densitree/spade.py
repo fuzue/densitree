@@ -23,12 +23,10 @@ class SPADE:
     The algorithm:
 
     1. **Density estimation** (k-NN) on all cells.
-    2. **Consensus clustering** over multiple runs:
-       a. Overcluster all cells into ``n_micro`` microclusters (MiniBatchKMeans).
-       b. Merge microclusters into ``n_clusters`` metaclusters using both
-          ward and average linkage agglomerative clustering.
-       c. Align labels across runs (Hungarian algorithm) and take majority vote.
-       d. Filter out low-agreement runs before voting.
+    2. **Consensus clustering** over multiple runs (overcluster into
+       ``n_micro`` microclusters, merge into ``n_clusters`` metaclusters,
+       align labels via Hungarian algorithm, filter low-agreement runs,
+       take majority vote).
     3. **Density-dependent downsampling** for tree construction.
     4. **MST construction** on metacluster centroids.
 

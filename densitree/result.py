@@ -10,7 +10,7 @@ import networkx as nx
 class SPADEResult:
     """Rich output object from a SPADE run.
 
-    Attributes
+    Parameters
     ----------
     labels_ : ndarray[int], shape (n_cells,)
         Cluster assignment for every original cell.
@@ -21,9 +21,10 @@ class SPADEResult:
         Downsampled cells used for clustering.
     down_idx : ndarray[int], shape (n_down,)
         Indices into the original array for the downsampled cells.
-    cluster_stats_ : pd.DataFrame
-        One row per cluster with ``size`` and ``median_<feature>`` columns.
-        Built lazily on first access.
+    n_features : int
+        Number of features in the input data.
+    feature_names : list[str] or None
+        Feature names. Auto-generated if ``None``.
     """
 
     labels_: np.ndarray

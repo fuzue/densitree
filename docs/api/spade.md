@@ -1,3 +1,0 @@
-# SPADE
-
-::: densitree.spade.SPADE

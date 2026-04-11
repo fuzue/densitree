@@ -5,6 +5,7 @@ dist/
 *.egg-info/
 .pytest_cache/
 site/
+_build/
 benchmarks/data/
 benchmarks/results/
 paper/
