@@ -3,24 +3,57 @@
     filter: invert(1) brightness(1.2);
 }
 
-/* Hide "Section Navigation" heading in the sidebar */
-.bd-sidebar-primary .bd-links__title {
-    display: none;
+/* ── Global navigation sidebar ─────────────────────────────────────────── */
+
+.densitree-global-nav .toctree-wrapper {
+    margin: 0;
 }
 
-/* Render top-level nav as a vertical list in the primary sidebar */
-.bd-sidebar-primary .bd-navbar-elements {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
+/* Section caption headers (Getting Started, Tutorials, …) */
+.densitree-global-nav p.caption {
+    margin: 0.9rem 0 0.2rem;
 }
 
-.bd-sidebar-primary .bd-navbar-elements .nav-item {
-    width: 100%;
+.densitree-global-nav p.caption:first-of-type {
+    margin-top: 0;
 }
 
-.bd-sidebar-primary .bd-navbar-elements .nav-item .nav-link {
+.densitree-global-nav .caption-text {
     display: block;
-    width: 100%;
-    padding: 0.25rem 0.5rem;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--pst-color-text-muted);
+    padding: 0 0.5rem;
+}
+
+/* Page links within each section */
+.densitree-global-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.densitree-global-nav li.toctree-l1 > a {
+    display: block;
+    padding: 0.22rem 0.75rem;
+    color: var(--pst-color-text-base);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.densitree-global-nav li.toctree-l1 > a:hover {
+    color: var(--pst-color-primary);
+    background-color: var(--pst-color-surface);
+    text-decoration: none;
+}
+
+/* Active (current) page */
+.densitree-global-nav li.toctree-l1.current > a {
+    color: var(--pst-color-primary);
+    font-weight: 500;
+    background-color: var(--pst-color-surface);
 }
