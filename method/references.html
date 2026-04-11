@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>References &#8212; densitree 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=7f76b32a3354e82990f2" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=7f76b32a3354e82990f2" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e51eaa68" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=7f76b32a3354e82990f2"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=7f76b32a3354e82990f2" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=7f76b32a3354e82990f2" />
+
+    <script src="../_static/documentation_options.js?v=38b66d78"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=fd10adb8"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'method/references';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Improvements over Standard SPADE" href="improvements.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+<meta property="og:type" content="website">
+<meta property="og:title" content="References — densitree">
+<meta property="og:description" content="Density-normalized clustering with spanning tree construction for high-dimensional data. State-of-the-art SPADE implementation in Python.">
+<meta property="og:image" content="https://densitree.fuzue.tech/assets/images/social-card.png">
+<meta property="og:site_name" content="densitree">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://densitree.fuzue.tech/assets/images/social-card.png">
+<meta name="author" content="Fuzue Tech">
+
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">densitree 0.1.0 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/fuzue/densitree" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/densitree/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/fuzue/densitree" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/densitree/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../getting-started/installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../getting-started/quickstart.html">
+    Quick Start
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../guide.html">
+    densitree User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials/flow_cytometry.html">
+    Tutorial: Flow Cytometry Analysis with densitree
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials/comparing_conditions.html">
+    Tutorial: Comparing Conditions
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/spade.html">
+    SPADE
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/result.html">
+    SPADEResult
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/steps.html">
+    Pipeline Steps
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/plotting.html">
+    Plotting
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks/overview.html">
+    Benchmarks Overview
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks/datasets.html">
+    Benchmark Datasets
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks/results.html">
+    Benchmark Results
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks/comparison.html">
+    Method Comparison
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="algorithm.html">
+    The SPADE Algorithm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="improvements.html">
+    Improvements over Standard SPADE
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    References
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">References</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="references">
+<h1>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h1>
+<section id="core-spade-publications">
+<h2>Core SPADE publications<a class="headerlink" href="#core-spade-publications" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><strong>Qiu, P., Simonds, E.F., Bendall, S.C., Gibbs, K.D. Jr., Bruggner, R.V., Linderman, M.D., Sachs, K.,
+Nolan, G.P., &amp; Plevritis, S.K.</strong> (2011). “Extracting a cellular hierarchy from high-dimensional cytometry
+data with SPADE.” <em>Nature Biotechnology</em>, 29(10), 886–891.
+<a class="reference external" href="https://doi.org/10.1038/nbt.1991">doi:10.1038/nbt.1991</a></p>
+<p>The original SPADE paper. Introduces density-dependent downsampling + agglomerative clustering + MST
+for CyTOF data.</p>
+</li>
+<li><p><strong>Qiu, P.</strong> (2017). “Toward deterministic and semiautomated SPADE analysis.” <em>Cytometry Part A</em>,
+91(7), 714–727. <a class="reference external" href="https://doi.org/10.1002/cyto.a.23068">doi:10.1002/cyto.a.23068</a></p>
+<p>Addresses stochasticity and proposes deterministic variants of SPADE.</p>
+</li>
+</ol>
+</section>
+<section id="key-applications">
+<h2>Key applications<a class="headerlink" href="#key-applications" title="Link to this heading">#</a></h2>
+<ol class="arabic" start="3">
+<li><p><strong>Bendall, S.C., Simonds, E.F., Qiu, P., et al.</strong> (2011). “Single-cell mass cytometry of differential
+immune and drug responses across a human hematopoietic continuum.” <em>Science</em>, 332(6030), 687–696.
+<a class="reference external" href="https://doi.org/10.1126/science.1198704">doi:10.1126/science.1198704</a></p>
+<p>First high-profile CyTOF + SPADE application — mapping human hematopoiesis.</p>
+</li>
+<li><p><strong>Levine, J.H., Simonds, E.F., Bendall, S.C., et al.</strong> (2015). “Data-Driven Phenotypic Dissection of
+AML Reveals Progenitor-like Cells that Correlate with Prognosis.” <em>Cell</em>, 162(1), 184–197.
+<a class="reference external" href="https://doi.org/10.1016/j.cell.2015.05.047">doi:10.1016/j.cell.2015.05.047</a></p>
+<p>Introduces PhenoGraph; includes SPADE comparisons. Source of the <strong>Levine_32dim</strong> and <strong>Levine_13dim</strong>
+benchmark datasets.</p>
+</li>
+</ol>
+</section>
+<section id="benchmark-studies">
+<h2>Benchmark studies<a class="headerlink" href="#benchmark-studies" title="Link to this heading">#</a></h2>
+<ol class="arabic" start="5">
+<li><p><strong>Samusik, N., Good, Z., Spitzer, M.H., Davis, K.L., &amp; Nolan, G.P.</strong> (2016). “Automated mapping of
+phenotype space with single-cell data.” <em>Nature Methods</em>, 13(6), 493–496.
+<a class="reference external" href="https://doi.org/10.1038/nmeth.3863">doi:10.1038/nmeth.3863</a></p>
+<p>Systematic comparison of SPADE, FlowSOM, PhenoGraph, and other methods. Source of the <strong>Samusik_01</strong>
+benchmark dataset.</p>
+</li>
+<li><p><strong>Weber, L.M. &amp; Robinson, M.D.</strong> (2016). “Comparison of clustering methods for high-dimensional
+single-cell flow and mass cytometry data.” <em>Cytometry Part A</em>, 89(12), 1084–1096.
+<a class="reference external" href="https://doi.org/10.1002/cyto.a.23030">doi:10.1002/cyto.a.23030</a></p>
+<p>Comprehensive benchmark of 18 clustering methods including SPADE, with standardized evaluation metrics.</p>
+</li>
+</ol>
+</section>
+<section id="related-methods">
+<h2>Related methods<a class="headerlink" href="#related-methods" title="Link to this heading">#</a></h2>
+<ol class="arabic" start="7">
+<li><p><strong>Van Gassen, S., Callebaut, B., Van Helden, M.J., et al.</strong> (2015). “FlowSOM: Using self-organizing
+maps for visualization and interpretation of cytometry data.” <em>Cytometry Part A</em>, 87(7), 636–645.
+<a class="reference external" href="https://doi.org/10.1002/cyto.a.22625">doi:10.1002/cyto.a.22625</a></p>
+<p>FlowSOM — often compared to SPADE. Faster, also produces a tree, but uses SOMs instead of
+density-dependent downsampling.</p>
+</li>
+<li><p><strong>Levine, J.H., et al.</strong> (2015). See reference 4 above.</p>
+<p>PhenoGraph — graph-based clustering using k-NN + Louvain community detection. Produces flat clusters
+(no tree), but often better cluster purity.</p>
+</li>
+</ol>
+</section>
+<section id="datasets-used-in-densitree-benchmarks">
+<h2>Datasets used in densitree benchmarks<a class="headerlink" href="#datasets-used-in-densitree-benchmarks" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="9">
+<li><p><strong>Levine_32dim</strong>: 81,747 cells, 32 markers, 14 manually gated populations. From reference 4. Available
+via <a class="reference external" href="https://flowrepository.org/id/FR-FCM-ZZPH">FlowRepository FR-FCM-ZZPH</a> and
+<a class="reference external" href="https://github.com/lmweber/HDCytoData">Weber &amp; Robinson’s HDCytoData</a>.</p></li>
+<li><p><strong>Samusik_01</strong>: 86,864 cells, 39 markers, 24 manually gated populations. From reference 5. Available
+via <a class="reference external" href="https://flowrepository.org/id/FR-FCM-ZZYA">FlowRepository FR-FCM-ZZYA</a> and
+<a class="reference external" href="https://github.com/lmweber/HDCytoData">HDCytoData</a>.</p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="improvements.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Improvements over Standard SPADE</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-spade-publications">Core SPADE publications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-applications">Key applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#benchmark-studies">Benchmark studies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-methods">Related methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets-used-in-densitree-benchmarks">Datasets used in densitree benchmarks</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/method/references.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=7f76b32a3354e82990f2"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=7f76b32a3354e82990f2"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><a href="https://fuzue.tech" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4em;text-decoration:none;">
+  <img src="../_static/fuzue-logo.svg"
+       alt="Fuzue Tech"
+       height="22"
+       style="display:block;filter:var(--fuzue-logo-filter,none);">
+</a></div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Fuzue Tech.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
