@@ -3,6 +3,11 @@
     filter: invert(1) brightness(1.2);
 }
 
+/* Hide "Section Navigation" heading in the sidebar */
+.bd-sidebar-primary .bd-links__title {
+    display: none;
+}
+
 /* Render top-level nav as a vertical list in the primary sidebar */
 .bd-sidebar-primary .bd-navbar-elements {
     flex-direction: column;

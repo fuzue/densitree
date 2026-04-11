@@ -42,6 +42,7 @@ html_theme_options = {
     "primary_sidebar_end": [],
     "show_toc_level": 2,
     "navigation_with_keys": True,
+    "header_links_before_dropdown": 20,
     "footer_start": ["fuzue-footer"],
     "footer_end": ["copyright"],
 }
