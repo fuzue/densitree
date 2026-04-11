@@ -1,0 +1,13 @@
+{% extends "pydata_sphinx_theme/layout.html" %}
+
+{% block extrahead %}
+{{ super() }}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ docstitle }} — densitree">
+<meta property="og:description" content="Density-normalized clustering with spanning tree construction for high-dimensional data. State-of-the-art SPADE implementation in Python.">
+<meta property="og:image" content="https://densitree.fuzue.tech/assets/images/social-card.png">
+<meta property="og:site_name" content="densitree">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://densitree.fuzue.tech/assets/images/social-card.png">
+<meta name="author" content="Fuzue Tech">
+{% endblock %}
