@@ -3,7 +3,7 @@ import sys
 sys.path.insert(0, os.path.abspath('..'))
 
 project = 'densitree'
-copyright = '2025, Fuzue Tech'
+copyright = '2026, Fuzue Tech'
 author = 'Fuzue Tech'
 from importlib.metadata import version as _get_version
 release = _get_version('densitree')
