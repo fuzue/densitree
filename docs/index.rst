@@ -75,7 +75,7 @@ densitree also supports interactive plotly trees — hover for cluster details, 
 
 .. raw:: html
 
-   <iframe src="assets/images/tree_interactive.html" width="100%" height="500" frameborder="0"></iframe>
+   <iframe src="images/tree_interactive.html" width="100%" height="500" frameborder="0"></iframe>
 
 Installation
 ------------
