@@ -32,8 +32,7 @@ html_theme_options = {
             "icon": "fa-brands fa-python",
         },
     ],
-    "og_image": "https://densitree.fuzue.tech/assets/images/social-card.png",
-    "show_toc_level": 2,
+"show_toc_level": 2,
     "navigation_with_keys": True,
 }
 
