@@ -7,19 +7,17 @@ from .base import BaseStep
 class ClusterStep(BaseStep):
     """Two-stage clustering on the downsampled cell set.
 
-    Stage 1: Overcluster into n_micro microclusters using MiniBatchKMeans
-             (fast, sees all downsampled cells, captures fine structure).
-    Stage 2: Merge microclusters into n_clusters metaclusters using
-             agglomerative clustering on the microcluster centroids.
+    Stage 1: Overcluster into ``n_micro`` microclusters using MiniBatchKMeans
+    (fast, sees all downsampled cells, captures fine structure).
+
+    Stage 2: Merge microclusters into ``n_clusters`` metaclusters using
+    agglomerative clustering on the microcluster centroids.
 
     This approach produces much better cluster boundaries than single-stage
-    agglomerative clustering because:
-    - MiniBatchKMeans scales linearly and produces stable microclusters
-    - Agglomerative merging on ~n_micro centroids is fast and produces
-      good metaclusters
-    - Upsampling to microcluster centroids (many, fine-grained) rather
-      than metacluster centroids (few, coarse) dramatically improves
-      the accuracy of cell assignment
+    agglomerative clustering because MiniBatchKMeans scales linearly and
+    produces stable microclusters, agglomerative merging on centroids is fast,
+    and upsampling to fine-grained microcluster centroids dramatically
+    improves cell assignment accuracy.
 
     Returns micro-level and meta-level labels plus centroids for both.
     """

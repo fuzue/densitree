@@ -9,9 +9,8 @@ class DownsampleStep(BaseStep):
     Cells in dense regions are sampled with lower probability so that
     rare populations (low density) are preserved after downsampling.
 
-    Inclusion probability for cell i:
-        p_i = min(1, target_count * w_i / sum(w))
-    where w_i = 1 / density_i.
+    Inclusion probability for cell i: ``p_i = min(1, target_count * w_i / sum(w))``
+    where ``w_i = 1 / density_i``.
     """
 
     def __init__(self, downsample_target: float = 0.05, random_state: int | None = None) -> None:
