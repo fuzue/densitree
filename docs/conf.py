@@ -26,7 +26,7 @@ html_static_path = ['_static']
 html_css_files = ['custom.css']
 html_extra_path = ['CNAME', 'assets']
 html_sidebars = {
-    "**": ["navbar-nav", "sidebar-nav-bs"],
+    "**": ["sidebar-globalnav"],
 }
 
 html_theme_options = {
@@ -42,7 +42,6 @@ html_theme_options = {
     "primary_sidebar_end": [],
     "show_toc_level": 2,
     "navigation_with_keys": True,
-    "header_links_before_dropdown": 20,
     "footer_start": ["fuzue-footer"],
     "footer_end": ["copyright"],
 }

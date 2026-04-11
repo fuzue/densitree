@@ -1,0 +1,5 @@
+{# Renders the full global toctree: all section groups and their pages #}
+<nav class="bd-docs-nav bd-links densitree-global-nav"
+     aria-label="{{ _('Navigation') }}">
+  {{ toctree(collapse=False, maxdepth=2, includehidden=True, titles_only=True) }}
+</nav>
