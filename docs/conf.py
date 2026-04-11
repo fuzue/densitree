@@ -10,7 +10,6 @@ release = '0.1.0'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
-    'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx.ext.viewcode',
     'sphinx.ext.mathjax',
@@ -54,7 +53,7 @@ intersphinx_mapping = {
     'python': ('https://docs.python.org/3', None),
     'numpy': ('https://numpy.org/doc/stable', None),
     'scipy': ('https://docs.scipy.org/doc/scipy', None),
-    'sklearn': ('https://scikit-learn.org/stable', None),
+    'scikit-learn': ('https://scikit-learn.org/stable', None),
     'pandas': ('https://pandas.pydata.org/docs', None),
     'matplotlib': ('https://matplotlib.org/stable', None),
     'networkx': ('https://networkx.org/documentation/stable', None),
