@@ -35,6 +35,7 @@ html_theme_options = {
             "icon": "fa-brands fa-python",
         },
     ],
+    "navbar_center": [],
     "show_toc_level": 2,
     "navigation_with_keys": True,
     "footer_start": ["fuzue-footer"],
