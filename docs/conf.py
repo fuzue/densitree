@@ -25,6 +25,9 @@ html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
 html_extra_path = ['CNAME', 'assets']
+html_sidebars = {
+    "**": ["sidebar-nav-bs"],
+}
 
 html_theme_options = {
     "github_url": "https://github.com/fuzue/densitree",
@@ -36,6 +39,7 @@ html_theme_options = {
         },
     ],
     "navbar_center": [],
+    "primary_sidebar_end": [],
     "show_toc_level": 2,
     "navigation_with_keys": True,
     "footer_start": ["fuzue-footer"],
